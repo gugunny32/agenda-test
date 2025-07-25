@@ -1,0 +1,94 @@
+.status-panel {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.status-panel h2 {
+  margin: 0 0 1.5rem 0;
+  color: #4a5568;
+  text-align: left;
+}
+
+.status-loading {
+  text-align: center;
+  color: #718096;
+  padding: 2rem;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.status-label {
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.status-value {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: #2d3748;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-running .status-indicator {
+  background: #48bb78;
+  animation: pulse 2s infinite;
+}
+
+.status-connected .status-indicator {
+  background: #48bb78;
+}
+
+.status-disconnected .status-indicator {
+  background: #f56565;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .status-panel {
+    padding: 1rem;
+  }
+  
+  .status-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .status-item {
+    text-align: center;
+  }
+}

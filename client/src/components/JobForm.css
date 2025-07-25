@@ -1,0 +1,126 @@
+.job-form {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.job-form h2 {
+  margin: 0 0 1.5rem 0;
+  color: #4a5568;
+  text-align: left;
+}
+
+.presets {
+  margin-bottom: 2rem;
+}
+
+.presets h3 {
+  margin: 0 0 1rem 0;
+  color: #4a5568;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.preset-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.preset-btn {
+  background: #edf2f7;
+  border: 1px solid #e2e8f0;
+  color: #4a5568;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.preset-btn:hover {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  font-family: 'Courier New', monospace;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 0.25rem;
+  color: #718096;
+  font-size: 0.8rem;
+}
+
+.submit-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  width: 100%;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #5a67d8;
+  transform: translateY(-1px);
+}
+
+.submit-btn:disabled {
+  background: #a0aec0;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .job-form {
+    padding: 1rem;
+  }
+  
+  .preset-buttons {
+    flex-direction: column;
+  }
+  
+  .preset-btn {
+    text-align: center;
+  }
+}
